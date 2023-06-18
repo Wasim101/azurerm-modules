@@ -2,7 +2,6 @@ resource "azurerm_network_interface" "nic"{
     name = "${var.vm_name}-nic1"
     resource_group_name = var.rg_name
     location = var.rg_location
-    depends_on = [ var.subnet_id ]
 
     ip_configuration {
         name = "internal"
