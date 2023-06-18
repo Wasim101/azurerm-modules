@@ -1,3 +1,12 @@
+variable "rg_name" {
+    type =string
+}
+
+variable "rg_location"{
+	type=string
+
+}
+
 variable "vm_name"{
     type = string
     description = "Name of the virtual machine"
@@ -28,7 +37,7 @@ variable "acc_type"{
 variable "os_disk_size" {
     type = string
     description = "Size for the OS disk"
-    default = "128gb" 
+    default = "128" 
 }
 
 variable "subnet_id" {
