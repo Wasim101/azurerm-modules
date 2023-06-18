@@ -38,8 +38,12 @@ variable "acc_type"{
 variable "os_disk_size" {
     type = string
     description = "Size for the OS disk"
-    default = "128gb"
-  
+    default = "128gb" 
+}
+
+variable "subnet_id" {
+    type = string
+    description = "subnet id"
 }
 
 

@@ -12,7 +12,7 @@ resource "azurerm_ntework_interface" "nic"{
     ip_configuration {
         name = "internal"
         subnet_id = var.subnet_id
-        private_ip_address_allocation = var.aloocation_type
+        private_ip_address_allocation = var.allocation_type
     }
 }
 
