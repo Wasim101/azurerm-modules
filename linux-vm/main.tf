@@ -1,5 +1,5 @@
 module "rg1"{
-    source = "..//az-rg-module"
+    source = "./az-rg-module"
     az-rg-name = var.rg_name
     az-rg-location = var.rg_location
 }
