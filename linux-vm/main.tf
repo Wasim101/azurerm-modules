@@ -5,14 +5,14 @@ module "rg1"{
 }
 
 resource "azurerm_ntework_interface" "nic"{
-    name = var.nic_name
+    name = "${var.vm_name}-nic1"
     resource_group_name = module.rg1.az-rg-name
     location = module.rg1.az-rg-location
 
     ip_configuration {
         name = "internal"
         subnet_id = var.subnet_id
-        private_ip_address_allocation = var.allocation_type
+        private_ip_address_allocation = "Static"
     }
 }
 
