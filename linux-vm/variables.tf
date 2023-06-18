@@ -1,13 +1,3 @@
-variable "rg_name" {
-    type = string
-    description = "Name of the resource group"
-}
-
-variable "rg_location"{
-    type = string
-    description = "Name of the location where all the resource will be deployed"
-}
-
 variable "vm_name"{
     type = string
     description = "Name of the virtual machine"

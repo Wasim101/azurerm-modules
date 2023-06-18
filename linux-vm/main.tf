@@ -1,7 +1,7 @@
 module "rg1"{
     source = "git@github.com:Wasim101/azurerm-modules.git//az-rg-module"
-    az-rg-name = var.rg_name
-    az-rg-location = var.rg_location
+    az-rg-name = "module-rg-gg"
+    az-rg-location = "uksouth"
 }
 
 resource "azurerm_network_interface" "nic"{
