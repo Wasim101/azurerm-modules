@@ -1,13 +1,13 @@
 module "rg1"{
     source = "git@github.com:Wasim101/azurerm-modules.git//az-rg-module"
-    az-rg-name = "module-rg-gg"
+    az-rg-name = "${var.vm_name}-resource-group"
     az-rg-location = "uksouth"
 }
 
 resource "azurerm_network_interface" "nic"{
     name = "${var.vm_name}-nic1"
-    resource_group_name = module.rg1.name
-    location = module.rg1.location
+    resource_group_name = module.rg1.az-rg-name
+    location = module.rg1.az-rg-location
 
     ip_configuration {
         name = "internal"
@@ -19,8 +19,8 @@ resource "azurerm_network_interface" "nic"{
 
 resource "azurerm_linux_virtual_machine" "vm1"{
     name = var.vm_name
-    location = module.rg1.location
-    resource_group_name = module.rg1.name
+    location = module.rg1.az-rg-location
+    resource_group_name = module.rg1.az-rg-name
     size = var.vm_size
     admin_username = var.admin_username
     network_interface_ids = [azurerm_network_interface.nic.id]
