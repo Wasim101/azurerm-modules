@@ -4,7 +4,7 @@ module "rg1"{
     az-rg-location = var.rg_location
 }
 
-resource "azurerm_ntework_interface" "nic"{
+resource "azurerm_network_interface" "nic"{
     name = "${var.vm_name}-nic1"
     resource_group_name = module.rg1.az-rg-name
     location = module.rg1.az-rg-location
