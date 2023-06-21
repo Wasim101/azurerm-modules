@@ -44,5 +44,27 @@ variable "subnet_id" {
     description = "subnet id"
 }
 
+variable "image_publisher" {
+    type =string
+    description = "Please mention the publisher of image you want to use"
+    default = "Canonical"
+}
 
+variable "image_offer" {
+    type =string
+    description = "Please mention the offer of image you want to use"
+    default = "0001-com-ubuntu-server-focal"
+}
+
+variable "image_sku" {
+    type =string
+    description = "Please mention the sku of the image"
+    default = "20_04-lts"
+}
+
+variable "image_version" {
+    type =string
+    description = "Please mention the version of the image"
+    default = "latest"
+}
 

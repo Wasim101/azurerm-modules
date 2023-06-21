@@ -1,4 +1,4 @@
-It's a module to create a Ubuntu linux VM, please refer to it if you need to create one
+It's a module to create a Ubuntu linux VM, please refer to it if you need to create an Ubuntu VM
 
 Required attributes
 
@@ -13,3 +13,10 @@ vm_size (size of the Virtual machine)
 admin_username (Admin usrrname for a VM)
 
 subnet_id (Subnet Id for IP address allocation to a VM)
+
+Optional attributes (default image is for Ubuntu 20_04-lts)
+
+image_publisher
+image_offer
+image_sku
+image_version

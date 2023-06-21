@@ -25,15 +25,16 @@ resource "azurerm_linux_virtual_machine" "vm1"{
   }
 
   os_disk {
+    name                 = "${var.vm_name}-osdisk"
     caching              = var.caching_type
     storage_account_type = var.acc_type
     disk_size_gb         = var.os_disk_size
   }
 
   source_image_reference {
-    publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-focal"
-    sku       = "20_04-lts"
-    version   = "latest"
+    publisher = var.image_publisher
+    offer     = var.image_offer
+    sku       = var.image_sku
+    version   = var.image_version
   }
 }
